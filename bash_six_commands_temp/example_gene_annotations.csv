@@ -1,0 +1,10 @@
+gene_ID,PC_ID,genome,KO_ID,KO_annotation,COG_ID,COG_annotation,rRNA
+0,PC_00001351,CC9311,K02338,DPO3B; DNA polymerase III subunit beta [EC:2.7.7.7],COG0592,DNA polymerase III sliding clamp (beta) subunit, PCNA homolog,FALSE
+1,PC_00001459,CC9311,NA,NA,NA,NA,FALSE
+2,PC_00001838,CC9311,K00764,purF; amidophosphoribosyltransferase [EC:2.4.2.14],COG0034,Glutamine phosphoribosylpyrophosphate amidotransferase,FALSE
+3,PC_00000967,GEYO,K02469,gyrA; DNA gyrase subunit A [EC:5.99.1.3],COG0188,DNA gyrase/topoisomerase IV, subunit A,FALSE
+4,PC_00001291,CC9311,NA,NA,COG0457,Tetratricopeptide (TPR) repeat,FALSE
+5,PC_00001130,CC9311,K18979,queG; epoxyqueuosine reductase [EC:1.17.99.6],COG1600,Epoxyqueuosine reductase  QueG (queuosine biosynthesis),FALSE
+6,PC_00002029,CC9311,NA,NA,NA,NA,FALSE
+7,PC_00000224,CC9311,NA,NA,COG2928,Uncharacterized membrane protein,FALSE
+8,PC_00001130,GEYO,K18979,queG; epoxyqueuosine reductase [EC:1.17.99.6],COG1600,Epoxyqueuosine reductase  QueG (queuosine biosynthesis),FALSE

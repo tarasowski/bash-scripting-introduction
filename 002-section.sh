@@ -23,7 +23,7 @@
 
 ## What is a Shell?
 # It's like a container -> it holds the information/environment inside of it -> like tupperware
-# It's an interface between users and Kernel/OS - If you start a browser on MAC OS and you clicking inside the browser,this is the app that talks to the shell. And the shell talks to the Kernel. And Kernel is telling the Hardware what to do.  In Windows GUI is a shell. Linux sh, bash is a shell.
+# It's an interface between users and Kernel/OS - If you start a browser on MAC OS and you clicking inside the browser,thats the shell. And the shell talks to the Kernel. And Kernel is telling the Hardware what to do.  In Windows GUI is a shell. Linux sh, bash is a shell.
 # If you don't have a GUI, you have a CLI its a shell on Linux etc.
 
 # Run this command to see which shell you have available.

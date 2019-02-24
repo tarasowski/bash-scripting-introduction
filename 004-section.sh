@@ -201,3 +201,90 @@ echo
     d) uptime;;
     *) echo Invalid choice ~ Bye.
   esac
+
+# For Loop Scripts
+#!/bin/bash
+# Author: Dimitri Tarasowski
+# Date created: 02/21/2019
+# Description: Checking for loops in bash
+# Date modified: 02/21/2019
+
+for i in 1 2 3 4 5
+do
+  echo "Welcome $i times"
+done
+
+for i in eat jump run sleep
+do
+  echo See Dimitri $i
+done
+
+for i in {1..3}
+do
+  touch "$i.sh"
+  echo $i.sh was created
+done
+
+for i in {1..3}
+do
+  rm "$i.sh"
+  echo $i.sh was removed
+done
+
+for i in a b c
+do 
+  rm $i.sh
+  echo $i.sh was removed
+done
+
+# Do-while Scripts
+#!/bin/bash
+# Author: Dimitri Tarasowski
+# Date created: 02/21/2019
+# Desc: Checking do-while loops
+# Data modified: 02/21/2019
+# A demon is a process that never dies and is always keep running and running. They are built with a while script.
+# Run a script until 2pm
+# ! is called BANG
+count=0
+num=10
+while [ $count -lt 10 ]
+do
+  echo
+  echo $num seconds left to stop this process $1
+  echo
+  sleep 1
+num=`expr $num - 1`
+count=`expr $count + 1`
+done
+echo
+echo $1 process is stopped!!!
+echo
+
+##
+##
+##
+# Exit Status
+# Everytime a command is run in a shell (in Linux). Is always has a status associated with it. If this is successful it will always give us status of 0. 
+# There are statuses from 0 to 255. Every status is different for meaning. This are the actual error codes. They have meaning. 
+# 0 = OK / Success
+# 1 = Minor problem
+# 2 = Serious trouble
+# 3 - 255 = Everything else
+# If you want to know the status of the preceeding command simply type:
+echo $? # 0 because the previous command was successfull
+pwdd
+echo $? # you'll get 127 as error code
+
+#!/bin/bash
+echo hello
+echo $?
+
+ls -ls ~/Desktop
+if [ $? -eq 0 ] # checks the error code if 0 means the file exists
+then
+  echo File exists
+else
+  echo "File doesn't exists"
+fi 
+
