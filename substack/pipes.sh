@@ -34,3 +34,24 @@ echo Should load the website
 # The good things about the pipelines in Unix is you can always test what each piece does in isolation
 # Test your pipeline in Isolation
 echo one two three beep boop | sed $'s/ /\\\n/g'
+
+# head prints the first part of a file
+head -n5 message.txt
+tail -n5 message.txt # tail is the opposite of head
+
+echo git logs
+git log | head -n1
+
+echo '$()'
+echo 'The $() (dollar sign and parentheses) is POSIX command substitution syntax. It does execute the command inside $() and paste back the result of that command. '
+DT=$(date)
+echo $DT
+
+# substack uses it all the time
+echo calendar
+cal -3
+# backticks will execute the command
+echo `date`.txt
+echo $(date).txt
+# the carrot means starting form the beginning of the line -> this is what carrot means -> searching for the string
+curl -s https://github.com/substack.keys | grep ^ssh-ed25519
