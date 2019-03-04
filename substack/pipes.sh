@@ -138,3 +138,64 @@ echo "<b>hello $(whoami)</b>"
 # If you want spaces in the value of arguments 
 #git commit -am 'Hello World' 
 # we do quote Hello World because it's the argument the git commit waiting for. If we have whitespaces it will put the first word `Hello` as the argument
+
+#########
+# permissions
+# user (u) - group (g)  - other (o)
+
+# if for a directory x (executable) is set it means you can list the content of the directory
+
+# chmod ugo-x logs -> removes the permission to list the content for everyone
+
+# chmod ugo+x logs -> adds permissions to everyone to list the content. 
+
+# x for files means you can run it chmod +x file.sh
+
+# chmod ugo+wrx pipes.sh -> gives everyone all rights
+
+# chmod ugo-wrx pipes.sh -> removes for everyone the rights
+# chmod a+wrx pipes.sh -> gives everyone all rights
+
+groups # shows all the groups the users belogs too
+
+# octal permissions chmod 644 -> 4 for write, 2 for read, 1 for execute -> (u)(g)(o) -> rw-w--w--
+
+########
+# exit codes
+echo $? # check the last exit code
+# the final operator is the semicolon
+# semicolon is just like with new lines it always going to execute the next command
+# && || ;
+
+# subshells
+# if you put parentesis around something it treats it as a subprogram
+(if test -f cool.txt; then echo true; else echo false; fi); echo $?
+ls /sdfsdfsdfsdf > /dev/null # this is how you through the data away
+
+
+########
+# job control
+# bash is built to handle multiple programs running in parallel.
+# Ctrl-C is an example of a signal. That gets sent to the program, when you want the program to exit
+# Ctrl-C terminate the process in the foreground
+# Ctrl-Z put the process in the background
+# Whenever you run a command you run it in the foreground.
+# kill sends a signal to the program to terminate
+
+# vim doesn't gets killed by kill %n, because some programs don't accept it.
+# use instead kill -9 %n to kill the program, so the OS system is going to deal with it.
+# fg is a signal too
+man kill
+kill %% # will stop the last job that was backgrounded
+
+
+###########
+# screen
+screen -list
+# screens are good for running little servers!!!
+# you can use screen to run command-line programs and keep them running, even when you go
+# screen -> puts you into the new screen. You can type Ctrl-D or Ctrl-C to drop out from the screen
+# screen -S name -> this is how you can give a name for a screen
+# Ctrl-A `d`  -> will detach you from the screen
+# screen -x name -> to attach back to the screen
+# type exit -> if you want to exit from the screen -> or Ctrl-D

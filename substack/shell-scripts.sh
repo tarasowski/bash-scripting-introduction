@@ -36,3 +36,6 @@ echo "Hello $NAME"
 #while true; do date; sleep 1; done
 for x in {0..10}; do echo $x; done
 ls -1 | while read LINE; do echo -n "$LINE";  wc -l $LINE | awk '{print $1}'; done
+
+# $PATH
+# put all your scripts into usr/local/bin -> your system doesn't modify this file
