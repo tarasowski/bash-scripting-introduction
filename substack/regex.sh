@@ -89,3 +89,28 @@ echo 'Hello1234 What9999 50505 __' | sed -E 's/[A-Za-z_ ]+//g' # to get rid of t
 #const pw = 'abc432!A'
 #/^[\w!@$%^&*\-+]{8,}$/.test(pw) && /[a-z]/.test(pw) && /[A-Z]/.test(pw) && /\d/.test(pw) && /[!@$%^$*\-]/.test(pw)
 #process.exit()
+
+######
+# negated character class
+# [^...] Put a ^ after the opening square braket in a character class to negate it.
+
+#### achchors
+# ^ beginning of the line
+# $ end of the line
+echo "cool beans" | sed -E "s/beans$/BEANS/g"
+echo "beans cool" | sed -E "s/^beans/BEANS/g"
+
+# groups
+# either one of this patterns is valid
+# (a|b) match a or b
+# `()` capture group
+# `(?:)` non capture group
+
+# we want to match either ee or oo
+echo "beep boop" | sed -E "s/b(ee|oo)p/XXX/g"
+echo "beep boop" | sed -E "s/b(e|o){2}p/XXX/g"
+
+# regex reference
+
+# documentation about the regex -> remember regex is it's own language that was created to parse strings
+perldoc perlreref
